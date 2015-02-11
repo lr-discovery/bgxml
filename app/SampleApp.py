@@ -7,15 +7,18 @@ from spyne.model.complex import Iterable
 app = Flask(__name__)
 spyne = Spyne(app)
 
-class SomeSoapService(spyne.Service):
-    __service_url_path__ = '/soap/someservice'
+class BgSoapService(spyne.Service):
+    __service_url_path__ = '/soap/bgservice/reflection'
     __in_protocol__ = Soap11(validator='lxml')
     __out_protocol__ = Soap11()
 
-    @spyne.srpc(Unicode, Integer, _returns=Iterable(Unicode))
-    def echo(str, cnt):
-        for i in range(cnt):
-            yield str
+    @spyne.srpc(Unicode, Unicode, Unicode, Integer, _returns=Iterable(Unicode))
+    def bg(title, address, application, id):
+
+        yield title
+        yield address
+        yield application
+        yield str(id)
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0')
