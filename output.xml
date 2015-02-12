@@ -1,5 +1,9 @@
 Bg test script
 --------------
+
+Service wsdl saved to TestOutputWsdl.xml
+
+
 Inputed good xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="tns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
@@ -13,9 +17,11 @@ Inputed good xml
       </ns1:bg>
    </ns0:Body>
 </SOAP-ENV:Envelope>
-Returned result
-<?xml version='1.0' encoding='UTF-8'?>
-<senv:Envelope xmlns:tns="tns" xmlns:senv="http://schemas.xmlsoap.org/soap/envelope/"><senv:Body><tns:bgResponse><tns:bgResult><tns:string>TN0001</tns:string><tns:string>8 Cornwall Street Plymouth PL6 7FD</tns:string><tns:string>AP1</tns:string><tns:string>3</tns:string></tns:bgResult></tns:bgResponse></senv:Body></senv:Envelope>Inputed bad xml
+
+Returned xml saved to TestOutputGood.xml
+
+
+Inputed bad xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="tns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
    <SOAP-ENV:Header/>
@@ -29,6 +35,5 @@ Returned result
    </ns0:Body>
 </SOAP-ENV:Envelope>
 
-Returned result
-<?xml version='1.0' encoding='UTF-8'?>
-<senv:Envelope xmlns:senv="http://schemas.xmlsoap.org/soap/envelope/"><senv:Body><senv:Fault><faultcode>senv:Client.SchemaValidationError</faultcode><faultstring>:1:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1: Element '{tns}id': 'THREE' is not a valid value of the atomic type 'xs:integer'.</faultstring><faultactor></faultactor></senv:Fault></senv:Body></senv:Envelope>
+
+Returned xml saved to TestOutputBad.xml

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<senv:Envelope xmlns:senv="http://schemas.xmlsoap.org/soap/envelope/"><senv:Body><senv:Fault><faultcode>senv:Client.SchemaValidationError</faultcode><faultstring>:1:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1: Element '{tns}id': 'THREE' is not a valid value of the atomic type 'xs:integer'.</faultstring><faultactor></faultactor></senv:Fault></senv:Body></senv:Envelope>
