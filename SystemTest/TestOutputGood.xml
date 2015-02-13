@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<senv:Envelope xmlns:tns="tns" xmlns:senv="http://schemas.xmlsoap.org/soap/envelope/"><senv:Body><tns:reflectionResponse><tns:reflectionResult><tns:string>TN0001</tns:string><tns:string>8 Cornwall Street Plymouth PL6 7FD</tns:string><tns:string>AP1</tns:string><tns:string>3</tns:string></tns:reflectionResult></tns:reflectionResponse></senv:Body></senv:Envelope>

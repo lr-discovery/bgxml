@@ -5,13 +5,16 @@ from spyne.model.primitive import Unicode, Integer
 from spyne.model.complex import Iterable
 from random import randint
 
+
 app = Flask(__name__)
 spyne = Spyne(app)
+
 
 class BgSoapService(spyne.Service):
     __service_url_path__ = '/soap/bgservice'
     __in_protocol__ = Soap11(validator='lxml')
     __out_protocol__ = Soap11()
+
 
     @spyne.srpc(Unicode, Unicode, Unicode, Integer, _returns=Iterable(Unicode))
     def reflection(title, address, application, id):

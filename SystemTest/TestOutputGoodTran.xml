@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<senv:Envelope xmlns:tns="tns" xmlns:senv="http://schemas.xmlsoap.org/soap/envelope/"><senv:Body><tns:tranResponse><tns:tranResult>66</tns:tranResult></tns:tranResponse></senv:Body></senv:Envelope>
