@@ -26,9 +26,7 @@ class BgSoapService(spyne.Service):
 
     @spyne.srpc(Unicode, Unicode, Unicode, _returns=Unicode)
     def tran(title, address, application):
-
         static_id = randint(0,100)
-        print static_id
         return str(static_id)
 
 if __name__ == '__main__':
