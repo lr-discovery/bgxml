@@ -1,2 +1,0 @@
-curl --data @test.xml http://localhost:5000/soap/someservice/echo
-curl --data @bad.xml http://localhost:5000/soap/someservice

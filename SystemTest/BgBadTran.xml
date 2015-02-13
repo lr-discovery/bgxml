@@ -2,11 +2,11 @@
 <SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="tns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
    <SOAP-ENV:Header/>
    <ns0:Body>
-      <ns1:bg>
+      <ns1:tran>
          <ns1:title>TN0001</ns1:title>
          <ns1:address>8 Cornwall Street Plymouth PL6 7FD</ns1:address>
          <ns1:application>AP1</ns1:application>
          <ns1:id>3</ns1:id>
-      </ns1:bg>
+      </ns1:tran>
    </ns0:Body>
 </SOAP-ENV:Envelope>
