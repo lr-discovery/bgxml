@@ -1,4 +1,5 @@
 import unittest
+from xml.dom.minidom import parseString
 from app.SampleApp import app
 
 REFLECTION_SVC_ENDPOINT = '/soap/bgservice/reflection'
@@ -79,7 +80,13 @@ class TestWebService(unittest.TestCase):
         response = self.service_function(TRAN_SVC_ENDPOINT, GOOD_TRAN_REQ_DATA)
         self.assertEqual(response.status, '200 OK')
 
-    # TODO - Test that a tran service response returns a valid identifier between 0 and 100
+    # Test that a tran service response returns a value
+    def test_tran_service_response_has_value(self):
+        response = self.service_function(TRAN_SVC_ENDPOINT, GOOD_TRAN_REQ_DATA)
+        xmldata = parseString(response.get_data())
+        resp_element = xmldata.getElementsByTagName("tns:tranResult")
+        resp_value = str(resp_element[0].firstChild.nodeValue)
+        self.assertTrue(resp_value != None)
 
     def service_function(self, service_endpoint, service_data):
         soap_body = service_data
